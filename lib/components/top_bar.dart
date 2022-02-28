@@ -16,21 +16,20 @@ class TopBar extends StatelessWidget {
             child: Row(
               children: [
                 Container(
-                  child: Padding(
-                    padding: const EdgeInsets.all(14),
-                    child: Center(
+                  width: 60,
+                  height: 60,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color.fromRGBO(155, 59, 218, 1.0),
+                  ),
+                  child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
                       child: Image.asset(
                         'lib/assets/images/user_icon_account.png',
                       ),
                     ),
                   ),
-                  decoration: BoxDecoration(
-                    color: Color.fromRGBO(155, 59, 218, 1.0),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(100),
-                    ),
-                  ),
-                  height: 55,
                 ),
                 SizedBox(
                   width: 200,

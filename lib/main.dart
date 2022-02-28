@@ -6,6 +6,8 @@ void main() {
   runApp(const NubankUi());
 }
 
+var secondaryColor = Color.fromRGBO(240, 241, 245, 1.0);
+
 class NubankUi extends StatelessWidget {
   const NubankUi({Key? key}) : super(key: key);
 

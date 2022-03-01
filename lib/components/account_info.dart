@@ -45,7 +45,7 @@ class _AccountInfoState extends State<AccountInfo> {
             Container(
               alignment: Alignment.centerLeft,
               child: Text(
-                'R\$ 234.90',
+                'R\$ 1.786.897,90',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
             ),

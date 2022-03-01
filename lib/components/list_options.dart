@@ -12,14 +12,14 @@ class CircleOptions extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(
-        left: 4.0,
-        right: 4.0,
+        left: 6.0,
+        right: 6.0,
       ),
       child: Column(
         children: [
           Container(
-            width: 80,
-            height: 80,
+            width: 70,
+            height: 70,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: secondaryColor,
@@ -32,8 +32,8 @@ class CircleOptions extends StatelessWidget {
             height: 10,
           ),
           Container(
-            child: Expanded(
-              child: Text(title),
+            child: Text(
+              title,
             ),
           ),
         ],

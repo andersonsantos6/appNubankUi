@@ -1,16 +1,11 @@
-# nubank_ui
+# Clone Nubank
 
-A new Flutter project.
+<p align="center">
+  <img  src="https://user-images.githubusercontent.com/99498850/158167529-559ff18f-2574-4c70-858f-78ad4b054ef2.gif" width="200" height="400"/>
+</p>
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Este é um Clone da interface do Nubank 100% autoral, desenvolvido inteiramente com Widgets customizados. (queria muito ter esta quantia na conta! hahaha😅)
+- Neste projeto foi usado os seguintes recursos:
+- StatelessWidget
+- Componentização de Widgets
+- Asset Files

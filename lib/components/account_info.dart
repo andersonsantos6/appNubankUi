@@ -10,47 +10,63 @@ class AccountInfo extends StatefulWidget {
 class _AccountInfoState extends State<AccountInfo> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 20),
-      child: Container(
-        alignment: Alignment.bottomLeft,
-        height: MediaQuery.of(context).size.height * 0.15,
-        width: double.infinity,
-        child: Column(
-          children: [
-            SizedBox(
-              height: 20,
-            ),
-            Row(
-              children: [
-                Container(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Conta',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      alignment: Alignment.bottomLeft,
+      height: 120,
+      width: double.infinity,
+      child: Column(
+        children: [
+          SizedBox(
+            height: 20,
+          ),
+          Row(
+            children: [
+              Container(
+                child: Text(
+                  'Conta',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
                   ),
                 ),
-                SizedBox(
-                  width: 320,
+              ),
+              Container(
+                child: Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Icon(
+                        Icons.arrow_forward_ios_rounded,
+                        size: 16,
+                        color: Colors.grey,
+                      ),
+                    ],
+                  ),
                 ),
-                Container(child: Icon(Icons.arrow_forward_ios))
+              )
+            ],
+          ),
+          SizedBox(
+            height: 12,
+          ),
+          Container(
+            alignment: Alignment.centerLeft,
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'R\$ 3.630.796,50',
+                  style: TextStyle(
+                    fontSize: 26,
+                  ),
+                ),
               ],
             ),
-            SizedBox(
-              height: 16,
-            ),
-            Container(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'R\$ 1.786.897,90',
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

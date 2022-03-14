@@ -1,41 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_ui/main.dart';
+import 'model_list_options.dart';
 
-class CircleOptions extends StatelessWidget {
-  late String title;
-  late IconData icon;
-
-  CircleOptions({Key? key, required this.title, required this.icon})
-      : super(key: key);
+class ListOptions extends StatelessWidget {
+  const ListOptions({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
-        left: 6.0,
-        right: 6.0,
-      ),
-      child: Column(
+    return Container(
+      height: 110,
+      width: double.infinity,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
         children: [
-          Container(
-            width: 70,
-            height: 70,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: secondaryColor,
-            ),
-            child: Center(
-              child: Icon(icon),
+          CircleOptions(
+              title: 'Área Pix', widget: const Icon(Icons.mobile_friendly)),
+          CircleOptions(
+            title: 'Pagar',
+            widget: Image.asset(
+              'lib/assets/images/bar_code.png',
             ),
           ),
-          SizedBox(
-            height: 10,
-          ),
-          Container(
-            child: Text(
-              title,
-            ),
-          ),
+          CircleOptions(
+              title: 'Transferir', widget: const Icon(Icons.payments)),
+          CircleOptions(
+              title: 'Depositar', widget: const Icon(Icons.payments_outlined)),
+          CircleOptions(title: 'Recarga', widget: const Icon(Icons.phone)),
+          CircleOptions(title: '#mecontrata', widget: Icon(Icons.work))
         ],
       ),
     );

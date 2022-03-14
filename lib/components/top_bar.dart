@@ -5,9 +5,9 @@ class TopBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var avaliableSpace = MediaQuery.of(context);
     return Container(
-      height: avaliableSpace.size.height * 0.18,
+      width: double.infinity,
+      height: 150,
       color: Theme.of(context).primaryColor,
       child: Column(
         children: [
@@ -16,49 +16,54 @@ class TopBar extends StatelessWidget {
             child: Row(
               children: [
                 Container(
-                  width: 60,
-                  height: 60,
+                  height: 50,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: Color.fromRGBO(155, 59, 218, 1.0),
                   ),
                   child: Center(
                     child: Padding(
-                      padding: const EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(12),
                       child: Image.asset(
                         'lib/assets/images/user_icon_account.png',
                       ),
                     ),
                   ),
                 ),
-                SizedBox(
-                  width: 200,
-                ),
                 Container(
-                  width: 135,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Icon(
-                        Icons.remove_red_eye_outlined,
-                        color: Colors.white,
-                      ),
-                      Icon(
-                        Icons.help_outline,
-                        color: Colors.white,
-                      ),
-                      Icon(
-                        Icons.mail_outline,
-                        color: Colors.white,
-                      ),
-                    ],
+                  child: Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.remove_red_eye_outlined,
+                              color: Colors.white,
+                            )),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.help_outline,
+                            color: Colors.white,
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.mail_outline,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                )
+                ),
               ],
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Container(
               alignment: Alignment.bottomLeft,
               child: Text(
